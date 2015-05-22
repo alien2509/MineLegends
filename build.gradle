@@ -25,13 +25,13 @@ archivesBaseName = "minelegends"
 repositories {
 	mavenCentral()
 	maven {
-		name 'sponge'
-		url 'http://repo.spongepwered.org/maven'
+		name 'Sponge maven repo'
+		url 'http://repo.spongepowered.org/maven'
 	}
 }
 
 dependencies {
-	compile 'org.spongepwered:spongeapi:2.1-SNAPSHOT'
+	compile 'org.spongepowered:spongeapi:2.1-SNAPSHOT'
 }
 
 minecraft {
