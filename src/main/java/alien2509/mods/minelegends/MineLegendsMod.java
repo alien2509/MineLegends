@@ -1,5 +1,9 @@
 package alien2509.mods.minelegends;
 
+import alien2509.mods.minelegends.proxy.IProxy;
+import alien2509.mods.minelegends.reference.Messages;
+import alien2509.mods.minelegends.reference.Reference;
+import alien2509.mods.minelegends.util.LogHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -15,7 +19,7 @@ import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.event.FMLServerStoppedEvent;
 import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.Mod_Name, certificateFingerprint = Reference.FINGERPRINT, version = Reference.MOD_VERSION, dependencies = Reference.DEPENDENCIES, guiFactory = Reference.GUI_FACTORY_CLASS)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, certificateFingerprint = Reference.FINGERPRINT, version = Reference.MOD_VERSION, dependencies = Reference.DEPENDENCIES, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class MineLegendsMod
 {
 	

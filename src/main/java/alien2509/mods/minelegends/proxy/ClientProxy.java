@@ -1,5 +1,8 @@
 package alien2509.mods.minelegends.proxy;
 
+import alien2509.mods.minelegends.client.util.ClientParticleHelper;
+import alien2509.mods.minelegends.client.util.ClientSoundHelper;
+
 public class ClientProxy extends CommonProxy
 {
 	
