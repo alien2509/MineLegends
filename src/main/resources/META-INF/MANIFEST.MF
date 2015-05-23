@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+FMLCorePlugin: alien2509.mods.minelegends.asm.MineLegendsLoadingPlugin
+FMLCorePluginContainsFMLMod: true
