@@ -1,10 +1,13 @@
 package alien2509.mods.minelegends.data;
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.SQLException;
 
 import org.spongepowered.api.service.sql.SqlService;
 import org.spongepowered.common.Sponge;
+
+import alien2509.mods.minelegends.util.Constants;
 
 public class DataBaseHandler
 {
@@ -13,9 +16,7 @@ public class DataBaseHandler
 	
 	public static DataBaseHandler getDataBaseHandler()
 	{
-		
 		return DataBaseHandler.dataBaseHandler;
-		
 	}
 	
 	private SqlService sql;
@@ -43,13 +44,20 @@ public class DataBaseHandler
 	public static void init() throws SQLException
 	{
 		
-		Connection conn = DataBaseHandler.getDataBaseHandler().getDataSource("jdbc:h2:MineLegends.db").getConnection();
-		try
+		File DataBaseLocation = new File(Constants.MinecraftDir +"/mods/MineLegends/MineLegends.db");
+		if(DataBaseLocation.exists() == false)
 		{
-			conn.prepareStatement("sql").execute();
-		} finally
-		{
-			conn.close();
+			
+			Connection conn = DataBaseHandler.getDataBaseHandler().getDataSource("jdbc:h2:"+ Constants.MinecraftDir +"/mods/MineLegends.db").getConnection();
+			try
+			{
+				conn.prepareStatement("CREATE TABLE MineLegends").execute();
+				conn.prepareStatement("").execute();
+			} finally
+			{
+				conn.close();
+			}
+		
 		}
 		
 	}

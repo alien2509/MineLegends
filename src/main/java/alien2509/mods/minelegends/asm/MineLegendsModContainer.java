@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.ModMetadata;
 public class MineLegendsModContainer extends DummyModContainer
 {
 	
+	@SuppressWarnings("unchecked")
 	public MineLegendsModContainer()
 	{
 		
