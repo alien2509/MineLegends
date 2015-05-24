@@ -51,7 +51,7 @@ public class DataBaseHandler
 			Connection conn = DataBaseHandler.getDataBaseHandler().getDataSource("jdbc:h2:"+ Constants.MinecraftDir +"/mods/MineLegends.db").getConnection();
 			try
 			{
-				conn.prepareStatement("CREATE TABLE MineLegends").execute();
+				conn.prepareStatement("CREATE DATABASE MineLegends").execute();
 				conn.prepareStatement("").execute();
 			} finally
 			{
