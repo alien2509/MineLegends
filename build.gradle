@@ -31,7 +31,7 @@ repositories {
 }
 
 dependencies {
-	compile 'org.spongepowered:sponge:1.8-1371-2.1DEV-456'
+	compile 'org.spongepowered:sponge:1.8-1371-2.1DEV-472'
 }
 
 minecraft {
