@@ -51,8 +51,11 @@ public class DataBaseHandler
 			Connection conn = DataBaseHandler.getDataBaseHandler().getDataSource("jdbc:h2:"+ Constants.MinecraftDir +"/mods/MineLegends.db").getConnection();
 			try
 			{
-				conn.prepareStatement("CREATE DATABASE MineLegends").execute();
-				conn.prepareStatement("").execute();
+				conn.prepareStatement("CREATE DATABASE MineLegends;").execute();
+				// Break == true means the block is broken in this case Break == false means the block is placed
+				conn.prepareStatement("CREATE TABLE BLOCKCHANGES(BlockName VARCHAR(255), PlayerName UUID, Time BIGINT, XCoord INT, YCoord INT, ZCoord INT, DimID INT, Break BOOLEAN);").execute();
+				conn.prepareStatement("CREATE TABLE PlAYERMOVEMENT();").execute();
+				conn.prepareStatement("CREATE TABLE TILEENTITYCHANGES();").execute();
 			} finally
 			{
 				conn.close();

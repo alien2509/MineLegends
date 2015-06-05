@@ -34,6 +34,13 @@ public class TimeHandler
 		
 	}
 	
+	public static long getCurrentDateInTicks()
+	{
+		
+		return 0;
+		
+	}
+	
 	@SubscribeEvent
 	public static void onTickUpdate(ServerTickEvent event)
 	{
