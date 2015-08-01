@@ -52,6 +52,7 @@ public class DataBaseHandler
 			try
 			{
 				conn.prepareStatement("CREATE DATABASE MineLegends;").execute();
+				conn.prepareStatement("CREATE TABLE DATETIME").execute();
 				// Break == true means the block is broken in this case Break == false means the block is placed
 				conn.prepareStatement("CREATE TABLE BLOCKCHANGES(BlockName VARCHAR(255), PlayerName UUID, Time BIGINT, XCoord INT, YCoord INT, ZCoord INT, DimID INT, Break BOOLEAN);").execute();
 				conn.prepareStatement("CREATE TABLE PlAYERMOVEMENT();").execute();

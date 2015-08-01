@@ -37,7 +37,7 @@ public class BlockEventHandler
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setObject(1, GameRegistry.findUniqueIdentifierFor(event.state.getBlock()));
 			pstmt.setObject(2, event.getPlayer().getGameProfile().getId());
-			pstmt.setObject(3, TimeHandler.getCurrentDateInTicks());
+			pstmt.setObject(3, DateTimeHandler.getCurrentDateTimeInTicks("System"));
 			pstmt.setObject(4, event.pos.getX());
 			pstmt.setObject(5, event.pos.getY());
 			pstmt.setObject(6, event.pos.getZ());
@@ -72,7 +72,7 @@ public class BlockEventHandler
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setObject(1, event.blockSnapshot.blockIdentifier.toString());
 			pstmt.setObject(2, event.player.getGameProfile().getId());
-			pstmt.setObject(3, TimeHandler.getCurrentDateInTicks());
+			pstmt.setObject(3, DateTimeHandler.getCurrentDateTimeInTicks("System"));
 			pstmt.setObject(4, event.pos.getX());
 			pstmt.setObject(5, event.pos.getY());
 			pstmt.setObject(6, event.pos.getZ());

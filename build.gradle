@@ -31,11 +31,11 @@ repositories {
 }
 
 dependencies {
-	compile 'org.spongepowered:sponge:1.8-1371-2.1DEV-472'
+	compile 'org.spongepowered:sponge:1.8-1499-2.1DEV-530'
 }
 
 minecraft {
-    version = "1.8-11.14.1.1371"
+    version = "1.8-11.14.3.1499"
     runDir = "eclipse"
     
     // the mappings can be changed at any time, and must be in the following format.
