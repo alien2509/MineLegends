@@ -4,13 +4,18 @@ import java.io.File;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import org.spongepowered.api.Game;
 import org.spongepowered.api.service.sql.SqlService;
-import org.spongepowered.common.Sponge;
+
+import com.google.inject.Inject;
 
 import alien2509.mods.minelegends.util.Constants;
 
 public class DataBaseHandler
 {
+	
+	@Inject
+	Game game;
 	
 	public static DataBaseHandler dataBaseHandler = new DataBaseHandler();
 	
@@ -24,7 +29,7 @@ public class DataBaseHandler
 	{
 		if(sql == null)
 		{
-			sql = Sponge.getGame().getServiceManager().provide(SqlService.class).get();
+			sql = game.getServiceManager().provide(SqlService.class).get();
 		}
 		return sql.getDataSource(jdbcUrl);
 	}

@@ -25,7 +25,7 @@ public class MineLegendsSetupClass implements IFMLCallHook
 		{
 			
 			LogHelper.info("The H2DB jar file does not exist, downloading now...");
-			URL downloadLocation = new URL("https://repo1.maven.org/maven2/com/h2database/h2/1.4.187/h2-1.3.176.jar");
+			URL downloadLocation = new URL("https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.187/h2-1.4.187.jar");
 			ReadableByteChannel rbc = Channels.newChannel(downloadLocation.openStream());
 			FileOutputStream fos = new FileOutputStream(Constants.MinecraftDir + "/mods/H2DB.jar");
 			fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);

@@ -1,5 +1,6 @@
 package alien2509.mods.minelegends;
 
+import org.spongepowered.api.Game;
 import org.spongepowered.api.event.Subscribe;
 import org.spongepowered.api.event.state.ConstructionEvent;
 import org.spongepowered.api.event.state.InitializationEvent;
@@ -14,9 +15,14 @@ import org.spongepowered.api.event.state.ServerStoppingEvent;
 
 import org.spongepowered.api.plugin.Plugin;
 
+import com.google.inject.Inject;
+
 @Plugin(id = "minelegends", name = "MineLegends Sponge plugin", version = "0.0.1")
 public class MineLegendsPlugin
 {
+	
+	@Inject
+	Game game;
 	
 	/*
 	 * During this state the @Plugin class instance for each plugin is triggered
